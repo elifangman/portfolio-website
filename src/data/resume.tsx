@@ -22,6 +22,53 @@ export const DATA = {
     "Undergraduate builder focused on full-stack products and practical AI applications.",
   summary:
     "I am an undergraduate at Purdue University studying Mathematics with minors in Computer Science and Economics (Expected May 2028).",
+  interests:
+    "I enjoy building educational technology, exploring AI applications, and creating systems that make student workflows simpler and more effective.",
+  personalSummarySections: [
+    {
+      title: "Wisconsin",
+      description:
+        "I was born and raised in Wisconsin and spent part of my childhood moving around the Milwaukee area. I moved to West Lafayette, IN in 2020 to attend Purdue University.",
+      links: [],
+    },
+    {
+      title: "Cambridge",
+      description:
+        "When I was a Freshman in high school, I learned that my family would be moving to Cambridge, MA. As a 14 year old, this was about the worst news in the world. However, after much resistance, I grew to love my new home and the people I met there.",
+      links: [],
+    },
+    {
+      title: "San Francisco",
+      description:
+        "Like clockwork, it was time for another move. This time, with some more age and prior moves under my belt, the transition was much smoother. While I haven't had much time to explore SF and the surrounding areas, I have already become quiete fond of it.",
+      links: [],
+    },
+  ],
+  personalInterestSections: [
+    {
+      title: "Sports",
+      description: "Add sports you play, follow, or enjoy watching.",
+      links: [],
+    },
+    {
+      title: "Hobbies",
+      description:
+        "Add hobbies and activities you spend time on outside of school/work.",
+      links: [],
+    },
+    {
+      title: "Movies/TV",
+      description:
+        "Add movie or TV poster images and link each one to its IMDb page.",
+      links: [],
+    },
+    {
+      title: "Music",
+      description:
+        "Add artist/album/song artwork and link each one to Spotify pages.",
+      links: [],
+    },
+  ],
   avatarUrl: "/Headshot.png",
   skills: [
     { name: "React", icon: ReactLight },

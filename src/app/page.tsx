@@ -12,6 +12,58 @@ import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
+function SubsectionBlocks({
+  sections,
+}: {
+  sections: readonly {
+    title: string;
+    description: string;
+    links: readonly { label: string; href: string; image: string }[];
+  }[];
+}) {
+  return (
+    <div className="flex flex-col gap-6">
+      {sections.map((section, sectionIndex) => (
+        <BlurFade
+          key={section.title}
+          delay={BLUR_FADE_DELAY * 4 + sectionIndex * 0.1}
+        >
+          <div className="border rounded-xl p-4 md:p-5 space-y-3">
+            <h3 className="text-base md:text-lg font-semibold">{section.title}</h3>
+            <p className="text-sm text-muted-foreground">{section.description}</p>
+            {section.links.length > 0 && (
+              <div className="flex flex-wrap gap-3 pt-1">
+                {section.links.map((item) => (
+                  <Link
+                    key={`${section.title}-${item.label}`}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <div className="w-20 md:w-24 space-y-1">
+                      <div className="aspect-[2/3] overflow-hidden rounded-md border bg-muted">
+                        <img
+                          src={item.image}
+                          alt={item.label}
+                          className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+                        />
+                      </div>
+                      <p className="text-xs text-muted-foreground line-clamp-2">
+                        {item.label}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </BlurFade>
+      ))}
+    </div>
+  );
+}
+
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
@@ -40,10 +92,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="personal-summary">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
+            <h2 className="text-xl font-bold">Personal Summary</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
@@ -52,14 +104,15 @@ export default function Page() {
               </Markdown>
             </div>
           </BlurFade>
+          <SubsectionBlocks sections={DATA.personalSummarySections} />
         </div>
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+          <BlurFade delay={BLUR_FADE_DELAY * 6.5}>
             <WorkSection />
           </BlurFade>
         </div>
@@ -133,6 +186,21 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ProjectsSection />
         </BlurFade>
+      </section>
+      <section id="personal-interests">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+            <h2 className="text-xl font-bold">Personal Interests</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+              <Markdown>
+                {DATA.interests}
+              </Markdown>
+            </div>
+          </BlurFade>
+          <SubsectionBlocks sections={DATA.personalInterestSections} />
+        </div>
       </section>
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
