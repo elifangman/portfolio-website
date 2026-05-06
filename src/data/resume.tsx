@@ -70,10 +70,10 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:fangmaneli@gmail.com",
         icon: Icons.email,
 
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -85,7 +85,7 @@ export const DATA = {
       badges: [],
       location: "West Lafayette, IN",
       title: "Vice President of Risk Management",
-      logoUrl: "/Headshot.png",
+      logoUrl: "/Beta_Theta_Pi_Coat_of_Arms.png",
       start: "",
       end: "Present",
       description:
