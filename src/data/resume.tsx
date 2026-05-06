@@ -102,6 +102,15 @@ export const DATA = {
       start: "",
       end: "May 2028",
     },
+    {
+      school: "Cambridge Rindge and Latin School",
+      href: "https://crls.cpsd.us/",
+      degree:
+        "Graduated 2024",
+      logoUrl: "/crls_logo.png",
+      start: "September 2020",
+      end: "May 2024",
+    },
   ],
   projects: [
     {
