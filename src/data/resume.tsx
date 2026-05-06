@@ -50,7 +50,7 @@ export const DATA = {
 
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/eli-fangman-58411221b/",
         icon: Icons.linkedin,
 
         navbar: true,
