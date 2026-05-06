@@ -3,6 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
@@ -18,7 +19,13 @@ function SubsectionBlocks({
   sections: readonly {
     title: string;
     description: string;
-    links: readonly { label: string; href: string; image: string }[];
+    linkImageAspect?: "poster" | "square";
+    links: readonly {
+      label: string;
+      href: string;
+      image: string;
+      imageObjectFit?: "cover" | "contain";
+    }[];
   }[];
 }) {
   return (
@@ -42,11 +49,23 @@ function SubsectionBlocks({
                     className="group"
                   >
                     <div className="w-20 md:w-24 space-y-1">
-                      <div className="aspect-[2/3] overflow-hidden rounded-md border bg-muted">
+                      <div
+                        className={cn(
+                          "overflow-hidden rounded-md border bg-muted",
+                          section.linkImageAspect === "square"
+                            ? "aspect-square"
+                            : "aspect-[2/3]"
+                        )}
+                      >
                         <img
                           src={item.image}
                           alt={item.label}
-                          className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+                          className={cn(
+                            "h-full w-full transition-transform duration-200 group-hover:scale-105",
+                            item.imageObjectFit === "contain"
+                              ? "object-contain p-1"
+                              : "object-cover"
+                          )}
                         />
                       </div>
                       <p className="text-xs text-muted-foreground line-clamp-2">

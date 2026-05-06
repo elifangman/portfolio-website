@@ -48,7 +48,20 @@ export const DATA = {
     {
       title: "Sports",
       description: "Add sports you play, follow, or enjoy watching.",
-      links: [],
+      linkImageAspect: "square",
+      links: [
+        {
+          label: "Milwaukee Bucks",
+          href: "https://www.nba.com/bucks",
+          image: "/mkebucks.jpg",
+        },
+        {
+          label: "Green Bay Packers",
+          href: "https://www.packers.com/",
+          image: "/greenbaypackers.jpg",
+          imageObjectFit: "contain",
+        },
+      ],
     },
     {
       title: "Hobbies",
@@ -60,13 +73,51 @@ export const DATA = {
       title: "Movies/TV",
       description:
         "Add movie or TV poster images and link each one to its IMDb page.",
-      links: [],
+      links: [
+        {
+          label: "Good Will Hunting",
+          href: "https://www.imdb.com/title/tt0119217/?newac=true",
+          image: "goodwillhunting.jpg",
+        },
+        {
+          label: "Breaking Bad",
+          href: "https://www.imdb.com/title/tt0903747/",
+          image: "/breakingbad.jpg",
+        },
+        {
+          label: "The Godfather Part II",
+          href: "https://www.imdb.com/title/tt0071562/",
+          image: "/godfatherpartii.jpg",
+        },
+        {
+          label: "Goodfellas",
+          href: "https://www.imdb.com/title/tt0099685/?ref_=ls_t_20",
+          image: "/goodfellas.jpg",
+        }
+      ],
     },
     {
       title: "Music",
       description:
         "Add artist/album/song artwork and link each one to Spotify pages.",
-      links: [],
+      linkImageAspect: "square",
+      links: [
+        {
+          label: "The Beatles",
+          href: "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2",
+          image: "/thebeatles.jpg",
+        },
+        {
+          label: "Billy Joel",
+          href: "https://open.spotify.com/artist/6zFYqv1mOsgBRQbae3JJ9e",
+          image: "/billyjoel.jpg",
+        },
+        {
+          label: "Red Hot Chili Peppers",
+          href: "https://open.spotify.com/artist/0L8ExT028jH3ddEcZwqJJ5",
+          image: "/redhotchilipeppers.jpg",
+        },
+      ],
     },
   ],
   avatarUrl: "/Headshot.png",
@@ -115,11 +166,11 @@ export const DATA = {
         icon: Icons.youtube,
         navbar: false,
       },
-      email: {
+      Email: {
         name: "Send Email",
         url: "mailto:fangmaneli@gmail.com",
         icon: Icons.email,
-
+        label: "Email",
         navbar: true,
       },
     },
