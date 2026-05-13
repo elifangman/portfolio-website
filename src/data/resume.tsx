@@ -19,35 +19,35 @@ export const DATA = {
   location: "West Lafayette, IN (and San Francisco, CA)",
   locationLink: "https://www.google.com/maps/place/West+Lafayette,+IN",
   description:
-    "Undergraduate builder focused on full-stack products and practical AI applications.",
+    "Undergraduate student with a love for learning and building.",
   summary:
     "I am an undergraduate at Purdue University studying Mathematics with minors in Computer Science and Economics (Expected May 2028).",
   interests:
-    "I enjoy building educational technology, exploring AI applications, and creating systems that make student workflows simpler and more effective.",
+    "",
   personalSummarySections: [
     {
       title: "Wisconsin",
       description:
-        "I was born and raised in Wisconsin and spent part of my childhood moving around the Milwaukee area. I moved to West Lafayette, IN in 2020 to attend Purdue University.",
+        "I was born and raised in Wisconsin and spent part of my childhood moving around the Milwaukee area. I loved living in Wisconsin and all the people I met there. I especially loved exploring the beautiful state of Wisconsin and all the things it had to offer. Additionally, I have a strong connection to Minnesota since my dad grew up there and loved going up to the Boundary Waters Canoe Area Wilderness to go fishing and camping with him.",
       links: [],
     },
     {
       title: "Cambridge",
       description:
-        "When I was a Freshman in high school, I learned that my family would be moving to Cambridge, MA. As a 14 year old, this was about the worst news in the world. However, after much resistance, I grew to love my new home and the people I met there.",
+        "When I was a Freshman in high school, I learned that my family would be moving to Cambridge, MA. As a 14 year old, this was about the worst news in the world. However, after much resistance, I grew to love my new home and the people I met there. I could not have asked for a better place to spend my high school years. Cambridge and the surrounding Boston area is so full of life and culture and helped me grow into the person I am today.",
       links: [],
     },
     {
       title: "San Francisco",
       description:
-        "Like clockwork, it was time for another move. This time, with some more age and prior moves under my belt, the transition was much smoother. While I haven't had much time to explore SF and the surrounding areas, I have already become quiete fond of it.",
+        "Like clockwork, it was time for another move. This time, with some more age and prior moves under my belt, the transition was much smoother. While I haven't had much time to explore SF and the surrounding areas, I have already become quite fond of it.",
       links: [],
     },
   ],
   personalInterestSections: [
     {
       title: "Sports",
-      description: "Add sports you play, follow, or enjoy watching.",
+      description: "As I've moved around the country, I've had time to pick up a list of teams I have strong (sometimes conflicting) support for. Besides watching sports, I also love playing sports and being outside and sometimes a little too competitive!",
       linkImageAspect: "square",
       links: [
         {
@@ -61,18 +61,49 @@ export const DATA = {
           image: "/greenbaypackers.jpg",
           imageObjectFit: "contain",
         },
+        {
+          label: "Purdue Boilermakers",
+          href: "https://www.purdue.edu/",
+          image: "/purdueboilermakers.jpg",
+          imageObjectFit: "contain",
+        },
+        {
+          label: "Ski Racing",
+          href: "https://www.fis-ski.com/",
+          image: "/skiracing.jpg",
+          imageObjectFit: "contain",
+        },
       ],
     },
     {
       title: "Hobbies",
       description:
-        "Add hobbies and activities you spend time on outside of school/work.",
-      links: [],
+        "I have an affinity for picking up small new hobbies and throwing myself into them. I've tried my hand at a lot of different things, but I've found a few that I've stuck with and really enjoy.",
+      links: [
+        {
+          label: "Settlers of Catan",
+          href: "https://www.catan.com/",
+          image: "/settlersofcatan.jpg",
+          imageObjectFit: "contain",
+        },
+        {
+          label: "Kendama",
+          href: "https://sweetskendamas.com/",
+          image: "/kendama.jpg",
+          imageObjectFit: "contain",
+        },
+        {
+          label: "Sailing",
+          href: "https://www.sailing.com/",
+          image: "/sailing.jpg",
+          imageObjectFit: "contain",
+        }
+      ],
     },
     {
       title: "Movies/TV",
       description:
-        "Add movie or TV poster images and link each one to its IMDb page.",
+        "I am a huge move and TV fan and trying to boil down my favorite movies and TV shows to a small list was a challenge. I've included a few of my favorites that I've watched multiple times and really enjoy.",
       links: [
         {
           label: "Good Will Hunting",
@@ -99,7 +130,7 @@ export const DATA = {
     {
       title: "Music",
       description:
-        "Add artist/album/song artwork and link each one to Spotify pages.",
+        "I've recently been getting into music again and have been enjoying a lot of different artists and genres. I've included my most recent favorite wave of music as I've been getting into some older music.",
       linkImageAspect: "square",
       links: [
         {
@@ -127,7 +158,6 @@ export const DATA = {
     { name: "Typescript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
     { name: "Postgres", icon: Postgresql },
     { name: "Java", icon: Java },
   ],
@@ -217,7 +247,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Founded and developed a full-stack educational organizer using React, TypeScript, Supabase, and AI edge functions to parse PDF syllabi into structured JSONB data.",
+        "Founded and developing a full-stack educational organizer using React, TypeScript, Supabase, and AI edge functions. The goal of Syntric is to make it easier for students to organize their coursework and stay on top of their assignments.",
       technologies: ["React", "TypeScript", "Supabase", "AI Edge Functions"],
       links: [
         {
